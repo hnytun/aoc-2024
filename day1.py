@@ -1,12 +1,10 @@
 file1 = open('inputs/day1.txt', 'r')
-
 lines = file1.read().split('\n')
 
 distances=0
 left=[]
 right=[]
 for pair in lines:
-    
     left.append(int(pair.split("   ")[0]))
     right.append(int(pair.split("   ")[1]))
     
