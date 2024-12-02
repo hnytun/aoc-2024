@@ -38,10 +38,3 @@ for line in lines:
                 break
             
 print(safe)
-
-
-        
-#['4', '5', '6', '9', '12', '15']
-
-#testlineSorted doesnt work?=?
-
