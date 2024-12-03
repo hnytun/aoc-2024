@@ -25,12 +25,10 @@ matches = re.findall(regex_part2,input)
 do=True
 result2=0
 for match in matches:
-    
     if(match == "do()"):
         do=True
-    elif(match == "don't()"):
+    if(match == "don't()"):
         do=False
-    
     if(match.startswith("mul") and do):
         mul = parse_mul_match(match)
         result2 += int(mul[0])*int(mul[1])
