@@ -5,16 +5,12 @@ import re
 file1 = open('inputs/day3.txt', 'r')
 input = file1.read()
 
-def get_matches(regex,text):
-    matches = re.findall(regex,text)    
-    return matches
-
 #mul(11,8) -> 11,8
 def parse_mul_match(mul_match):
     return mul_match.replace("(",'').replace(")",'').split("mul")[1].split(",")
         
 regex_part1 = "mul\\(\\d*,\\d*\\)"    
-matches = get_matches(regex_part1,input)
+matches = re.findall(regex_part1,input)
 
 result=0
 for mul in matches:
@@ -24,7 +20,7 @@ for mul in matches:
 print("part1: ", result)
 
 regex_part2 = "do\(\)|don't\(\)|mul\(\d*,\d*\)"
-matches = get_matches(regex_part2,input)
+matches = re.findall(regex_part2,input)
 
 do=True
 result2=0
