@@ -13,28 +13,28 @@ def create_grid(lines):
 def check(grid,pos,direction):
     if(direction == "left"):
         if(pos[1] != 0):
-            return [pos[0],pos[1]-1,"left"]
+            return [pos[0],pos[1]-1]
     if(direction == "right"):        
         if(pos[1]+1 < len(grid[0])):
-            return [pos[0],pos[1]+1,"right"]
+            return [pos[0],pos[1]+1]
     if(direction == "up"):    
         if(pos[0] != 0):
-            return [pos[0]-1,pos[1],"up"]
+            return [pos[0]-1,pos[1]]
     if(direction == "down"):
         if(pos[0]+1 < len(grid)):
-            return [pos[0]+1,pos[1],"down"]
+            return [pos[0]+1,pos[1]]
     if(direction == "upleft"):    
         if(pos[1] != 0 and pos[0] != 0):
-            return [pos[0]-1,pos[1]-1,"upleft"]
+            return [pos[0]-1,pos[1]-1]
     if(direction == "upright"):    
         if(pos[0] != 0 and pos[1] +1 < len(grid[0])):
-            return [pos[0]-1,pos[1]+1,"upright"]
+            return [pos[0]-1,pos[1]+1]
     if(direction == "downleft"):
         if(pos[0]+1 < len(grid) and pos[1] != 0):
-            return [pos[0]+1,pos[1]-1,"downleft"]
+            return [pos[0]+1,pos[1]-1]
     if(direction == "downright"):  
         if(pos[0]+1 < len(grid) and pos[1]+1 < len(grid[0])):
-            return [pos[0]+1,pos[1]+1,"downright"]
+            return [pos[0]+1,pos[1]+1]
     return None
 
 def get_value(grid,pos):
