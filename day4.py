@@ -74,12 +74,14 @@ def checkCross(grid,pos):
     
     if(topleft == "M" and topright == "S" and bottomleft == "M" and bottomright == "S"):
         return True
-    if(topleft == "S" and topright == "S" and bottomleft == "M" and bottomright == "M"):
+    elif(topleft == "S" and topright == "S" and bottomleft == "M" and bottomright == "M"):
         return True
-    if(topleft == "M" and topright == "M" and bottomleft == "S" and bottomright == "S"):
+    elif(topleft == "M" and topright == "M" and bottomleft == "S" and bottomright == "S"):
         return True
-    if(topleft == "S" and topright == "M" and bottomleft == "S" and bottomright == "M"):
+    elif(topleft == "S" and topright == "M" and bottomleft == "S" and bottomright == "M"):
         return True
+    else:
+        return False
     
 grid = create_grid(lines)
 sum1=0
