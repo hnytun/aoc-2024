@@ -11,7 +11,6 @@ def create_grid(lines):
     return grid
         
 def check(grid,pos,direction):
-    
     if(direction == "left"):
         if(pos[1] != 0):
             return [pos[0],pos[1]-1,"left"]
@@ -60,7 +59,6 @@ def checkAllDirections(grid,pos):
     return sum       
 
 def checkCross(grid,pos):
-    
     topleft = check(grid,pos,"upleft")
     topright = check(grid,pos,"upright")
     bottomleft = check(grid,pos,"downleft")
